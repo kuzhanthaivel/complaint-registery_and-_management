@@ -1,0 +1,22 @@
+
+
+  {
+    "name": "complaint-registry",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+      "start": "nodemon index.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "mongoose": "^8.8.1",
+    "express": "^4.21.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
