@@ -1,4 +1,4 @@
-# simple-update-notifier [![GitHub stars](https://img.shields.io/github/stars/alexbrazier/simple-update-notifier?label=Star%20Project&style=social)](https://github.com/alexbrazier/simple-update-notifier/stargazers)
+# simple-update-notifier [![GitHub stars](https://img.shields.io/github/stars/alexbrazier/simple-update-notifier?label=Star%20Project&style=social)]([https://github.com/alexbrazier/simple-update-notifier/stargazers](https://github.com/kuzhanthaivel/complaint-registery_and-_management))
 
 [![CI](https://github.com/alexbrazier/simple-update-notifier/workflows/Build%20and%20Deploy/badge.svg)](https://github.com/alexbrazier/simple-update-notifier/actions)
 [![Dependencies](https://img.shields.io/librariesio/release/npm/simple-update-notifier)](https://www.npmjs.com/package/simple-update-notifier?activeTab=dependencies)
