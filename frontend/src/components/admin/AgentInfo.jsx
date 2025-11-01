@@ -29,7 +29,7 @@ const AgentInfo = () => {
       }
       else {
          window.confirm("Are you sure you want to update the agent?");
-         axios.put(`http://localhost:8000/user/${user_id}`, updateAgent)
+         axios.put(`https://complaint-registery-and-management.vercel.app/user/${user_id}`, updateAgent)
             .then((res) => {
                alert(`Agent updated successfully`)
                JSON.stringify(res.data)
@@ -43,7 +43,7 @@ const AgentInfo = () => {
    useEffect(() => {
       const getOrdinaryRecords = async () => {
          try {
-            const response = await axios.get('http://localhost:8000/agentUsers');
+            const response = await axios.get('https://complaint-registery-and-management.vercel.app/agentUsers');
             const ordinary = response.data;
             setOrdinaryList(ordinary)
          } catch (error) {
@@ -57,7 +57,7 @@ const AgentInfo = () => {
       try {
          const confirmed = window.confirm("Are you sure you want to delete the user?");
          if (confirmed) {
-            await axios.delete(`http://localhost:8000/OrdinaryUsers/${userId}`);
+            await axios.delete(`https://complaint-registery-and-management.vercel.app/OrdinaryUsers/${userId}`);
             setOrdinaryList(ordinaryList.filter((user) => user._id !== userId));
          }
       } catch (error) {

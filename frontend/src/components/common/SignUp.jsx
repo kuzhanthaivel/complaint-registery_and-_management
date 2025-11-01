@@ -26,7 +26,7 @@ const SignUp = () => {
    const handleSubmit = async (e) => {
       e.preventDefault()
       const updatedUser = { ...user, userType: title };
-      axios.post("http://localhost:8000/SignUp", updatedUser)
+      axios.post("https://complaint-registery-and-management.vercel.app/SignUp", updatedUser)
          .then((res) => {
             alert("record submitted")
             JSON.stringify(res.data.user)

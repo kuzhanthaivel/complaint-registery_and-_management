@@ -28,7 +28,7 @@ const AgentHome = () => {
             if (user) {
                const { _id, name } = user;
                setUserName(name);
-               const response = await axios.get(`http://localhost:8000/allcomplaints/${_id}`);
+               const response = await axios.get(`https://complaint-registery-and-management.vercel.app/allcomplaints/${_id}`);
                const complaints = response.data;
                setAgentComplaintList(complaints);
             } else {
@@ -44,7 +44,7 @@ const AgentHome = () => {
 
    const handleStatusChange = async (complaintId) => {
       try {
-         await axios.put(`http://localhost:8000/complaint/${complaintId}`, { status: 'completed' });
+         await axios.put(`https://complaint-registery-and-management.vercel.app/complaint/${complaintId}`, { status: 'completed' });
          setAgentComplaintList((prevComplaints) =>
             prevComplaints.map((complaint) =>
                complaint._doc.complaintId === complaintId ? { ...complaint, _doc: { ...complaint._doc, status: 'completed' } } : complaint

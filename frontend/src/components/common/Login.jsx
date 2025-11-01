@@ -19,7 +19,7 @@ const Login = () => {
 
    const handleSubmit = async (e) => {
       e.preventDefault();
-      await axios.post("http://localhost:8000/Login", user)
+      await axios.post("https://complaint-registery-and-management.vercel.app/Login", user)
          .then((res) => {
             alert("Successfully logged in");
             localStorage.setItem("user", JSON.stringify(res.data));

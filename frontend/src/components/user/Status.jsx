@@ -14,7 +14,7 @@ const Status = () => {
     const user = JSON.parse(localStorage.getItem('user'));
     
     const { _id } = user;
-    axios.get(`http://localhost:8000/status/${_id}`)
+    axios.get(`https://complaint-registery-and-management.vercel.app/status/${_id}`)
       .then((res) => {
         setStatusCompliants(res.data);
       })
