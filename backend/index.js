@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 require("./config");
+require("dotenv").config();
 
 const {
   ComplaintSchema,
@@ -9,19 +10,24 @@ const {
   MessageSchema,
 } = require("./Schema");
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
+
 
 /**************************************** */
 app.use(express.json());
 app.use(cors());
 /********************************************** */
 
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
+
 /******************message *******************************/
 app.post("/messages", async (req, res) => {
   try {
     const { name, message, complaintId } = req.body;
     const messageData = new MessageSchema({
-      name,
+      name, 
       message,
       complaintId,
     });
